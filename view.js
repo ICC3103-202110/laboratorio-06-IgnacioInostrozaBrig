@@ -23,7 +23,7 @@ function getTable(model){
     const unid1 = Unit1
     const unid2 = Unit2
     //Is left side source?
-    if (direction === 'y'){
+    if (direction === 'y' || direction == 'Y'){
         return [{LeftValue: ssAmount,LeftUnit: unid1,RightValue: cAmount,RightUnit: unid2},]
     }
     else{
@@ -43,10 +43,10 @@ function inputForm(model){
             message: message,
             default: direction,
             validate: function(value){
-                if(value === 'y'){
+                if(value === 'y' || value == 'Y'){
                     return true
                 }
-                else if(value === 'n'){
+                else if(value === 'n' || value == 'N'){
                     return true
                 }
                 else {
